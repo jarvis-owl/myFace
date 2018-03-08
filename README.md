@@ -2,24 +2,26 @@
 
 This project finally shall include a trainable convolutional network to recognize familiar faces (distinguish them).
 
+``` 08.03.'18  ``` to do: renew image database and implement yet planned **tag_v2.0** get **diff** to tag_v1.4
+
 ## Part 1 - Video
 
 - capture - __how to collect ?__
 
     any video? write android app?
-    
+
 - name/tag
 - crop
 
   A pretrained face-finder might become handy.
-  Use 'Haar-Cascade-Classifier' or ___'openface'__, or somekind of googles 'inception'
+  Use 'Haar-Cascade-Classifier' or __'openface'__, or somekind of googles 'inception'
 
-Openface would be really cool to use - mighty face detection. 
+Openface would be really cool to use - mighty face detection.
 Eventually, it's useful to analyze each frame already here and just store tagged images of cropped detected faces.
 (*opencv's annotate* does that manually and writes face positions in images to a file.)
 Openface is probably able to cover this whole project by itself, but for now I failed to use it in anyway.
 So a Cascade Classifier might be sufficient (not for lateral faces without an extra classifier), what i'd like to cover in some way.
- 
+
 ## Part 2 - CNN
 - load videofiles (at least two different classes to distinguish) and grab tagged frames
 - train CNN
@@ -34,6 +36,7 @@ So a Cascade Classifier might be sufficient (not for lateral faces without an ex
 
 ## Part 3 - Model Usage
 
-- load model \*.ckpt and feed in image to determine
+- load model
+[\*.ckpt](https://nathanbrixius.wordpress.com/2016/05/24/checkpointing-and-reusing-tensorflow-models/) and feed in image to determine
 
 show video or just return a string?
